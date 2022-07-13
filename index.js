@@ -109,33 +109,33 @@ bosses.calamity.forEach(boss => { boss.type = "calamity" })
 bosses.all.push(...bosses.vanilla)
 bosses.all.push(...bosses.calamity)
 
-app.get("/api", async (req, res) => {
-    res.status(200).send("Server is up and running!")
+app.get("/", async (req, res) => {
+    res.sendFile('client/index.html', {root: __dirname })
 })
 
-app.get("/reset", async (req, res) => {
+// app.get("/reset", async (req, res) => {
 
-    bosses.all.forEach(async boss => {
-        const found = await Boss.create({
-            name: boss.name,
-            image: boss.image,
-            type: boss.type,
-            phase: boss.phase,
-            index: bosses.all.indexOf(boss)
-        })
-    })
+//     bosses.all.forEach(async boss => {
+//         const found = await Boss.create({
+//             name: boss.name,
+//             image: boss.image,
+//             type: boss.type,
+//             phase: boss.phase,
+//             index: bosses.all.indexOf(boss)
+//         })
+//     })
 
-    // bosses.all.forEach(async boss => {
-    //     const found = await Boss.create({
-    //         name: boss.name,
-    //         image: boss.image,
-    //         type: bosses.vanilla.includes,
-    //         phase: boss.phase
-    //     })
-    // })
+//     // bosses.all.forEach(async boss => {
+//     //     const found = await Boss.create({
+//     //         name: boss.name,
+//     //         image: boss.image,
+//     //         type: bosses.vanilla.includes,
+//     //         phase: boss.phase
+//     //     })
+//     // })
 
-    res.status(200)
-})
+//     res.status(200)
+// })
 
 app.get(["/bosses/:type/:phase/:finished"], async (req, res) => {
     let type = req.params.type || "all"
