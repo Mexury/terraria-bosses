@@ -117,6 +117,7 @@ bosses.calamity.forEach(boss => { boss.type = "calamity" })
 bosses.all.push(...bosses.vanilla)
 bosses.all.push(...bosses.calamity)
 
+app.use(express.static("public"))
 app.get("/", async (req, res) => {
     res.sendFile('client/index.html', { root: __dirname })
 })
