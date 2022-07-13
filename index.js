@@ -9,11 +9,12 @@ import cors from "cors"
 import dbConnect from "./utils/dbConnect.js"
 import Boss from "./schemas/Boss.js"
 
-app.use(cors())
+app.use(cors({
+    origin: '*'
+}))
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-
-app.options('*', cors())
 
 dbConnect()
 
@@ -105,7 +106,6 @@ bosses.vanilla.push({ name: "Stardust Pillar", phase: "event", image: "https://t
 bosses.vanilla.forEach(boss => { boss.type = "vanilla" })
 bosses.calamity.forEach(boss => { boss.type = "calamity" })
 
-
 bosses.all.push(...bosses.vanilla)
 bosses.all.push(...bosses.calamity)
 
@@ -115,16 +115,9 @@ app.get("/reset", async (req, res) => {
         const found = await Boss.create({
             name: boss.name,
             image: boss.image,
-            type: "vanilla",
-            phase: boss.phase
-        })
-    })
-    bosses.calamity.forEach(async boss => {
-        const found = await Boss.create({
-            name: boss.name,
-            image: boss.image,
-            type: "calamity",
-            phase: boss.phase
+            type: boss.type,
+            phase: boss.phase,
+            index: bosses.all.indexOf(boss)
         })
     })
 
@@ -158,7 +151,9 @@ app.get(["/bosses/:type/:phase/:finished"], async (req, res) => {
     if (phase === "any" || phase === "all") delete criteria.phase
     if (finished === "any" || finished === "all") delete criteria.finished
 
-    const found = await Boss.find(criteria)
+    let found = await Boss.find(criteria)
+
+    found = found.sort((a, b) => a.index - b.index)
 
     res.json({ amount: found.length, bosses: found })
 })

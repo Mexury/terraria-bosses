@@ -12,7 +12,8 @@ const BossSchema = new Schema({
     image: {
         type: String,
         required: true
-    }
+    },
+    index: Number
 })
 
 export default mongoose.models.Boss || mongoose.model("Boss", BossSchema)

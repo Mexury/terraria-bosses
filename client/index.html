@@ -86,7 +86,7 @@
         <script type="module" defer>
 
             const getBosses = async (type, phase, finished) => {
-                const response = await fetch(`http://127.0.0.1:3001/bosses/${type}/${phase}/${finished}`)
+                const response = await fetch(`https://terraria-bosses.herokuapp.com/bosses/${type}/${phase}/${finished}`)
                 const json = await response.json()
 
                 const bossWrapper = document.querySelector(".boss-wrapper")
