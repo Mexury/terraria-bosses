@@ -109,6 +109,10 @@ bosses.calamity.forEach(boss => { boss.type = "calamity" })
 bosses.all.push(...bosses.vanilla)
 bosses.all.push(...bosses.calamity)
 
+app.get("/api", async (req, res) => {
+    res.status(200).send("Server is up and running!")
+})
+
 app.get("/reset", async (req, res) => {
 
     bosses.all.forEach(async boss => {
