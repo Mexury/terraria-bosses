@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/main.css">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class="filter-button-wrapper">
+            <label class="filter-label">Game type</label>
+            <label class="filter-button" data-value="all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hash"><line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line></svg>
+                <input type="radio" name="type" checked/>
+            </label>
+            <label class="filter-button" data-value="vanilla">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                <input type="radio" name="type" />
+                Vanilla
+            </label>
+            <label class="filter-button" data-value="calamity">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <input type="radio" name="type" />
+                Calamity
+            </label>    
+        </div>
+
+        <div class="filter-button-wrapper">
+            <label class="filter-label">Boss type</label>
+            <label class="filter-button" data-value="all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hash"><line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line></svg>
+                <input type="radio" name="phase" checked/>
+            </label>
+            <label class="filter-button" data-value="miniboss">
+                <input type="radio" name="phase" />
+                Mini
+            </label>
+            <label class="filter-button" data-value="pre-hardmode">
+                <input type="radio" name="phase" />
+                Pre-Hardmode
+            </label>
+            <label class="filter-button" data-value="hardmode">
+                <input type="radio" name="phase" />
+                Hardmode
+            </label>
+            <label class="filter-button" data-value="post-moonlord">
+                <input type="radio" name="phase" />
+                Post-Moon Lord
+            </label>
+            <label class="filter-button" data-value="superboss">
+                <input type="radio" name="phase" />
+                Super
+            </label>
+            <label class="filter-button" data-value="event">
+                <input type="radio" name="phase" />
+                Event
+            </label>
+        </div>
+
+        <div class="filter-button-wrapper">
+            <label class="filter-label">Finished?</label>
+            <label class="filter-button" data-value="all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hash"><line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line></svg>
+                <input type="radio" name="finished" checked/>
+            </label>
+            <label class="filter-button success" data-value="yes">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <input type="radio" name="finished" />
+            </label>
+            <label class="filter-button error" data-value="no">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <input type="radio" name="finished" />
+            </label>    
+        </div>
+
+        <p id="boss-amount">Loading...</p>
+        <div class="boss-wrapper"></div>
+
+        <script type="module" defer>
+
+            const getBosses = async (type, phase, finished) => {
+                const response = await fetch(`http://127.0.0.1:3001/bosses/${type}/${phase}/${finished}`)
+                const json = await response.json()
+
+                const bossWrapper = document.querySelector(".boss-wrapper")
+                while(bossWrapper.lastChild) {
+                    bossWrapper.lastChild.remove()
+                }
+                
+                document.querySelector("#boss-amount").innerHTML = `<span>${json.amount}</span> bosses loaded...`
+                json.bosses.forEach(boss => {
+                    let bossContainer = document.createElement("button")
+                    bossContainer.className = "boss"
+                    bossContainer.classList.toggle("finished", boss.finished)
+
+                    let imgWrapper = document.createElement("div")
+                    imgWrapper.className = "img-wrapper"
+                    boss.image.split(",").forEach(image => {
+                        let img = document.createElement("img")
+                        img.src = image
+                        imgWrapper.append(img)
+                    })
+
+                    bossContainer.append(imgWrapper)
+                    let name = document.createElement("p")
+                    bossContainer.toggleAttribute("checked", boss.finished)
+                    bossContainer.onclick = async () => {
+                        bossContainer.toggleAttribute("checked")
+                        let finished = bossContainer.hasAttribute("checked")
+                        
+
+                        const response = await fetch(`http://127.0.0.1:3001/update/${boss.name}/${finished}`, {
+                            method: "POST"
+                        })
+                        const json = await response.json()
+                        getBosses(type, phase, document.querySelector('input[type="radio"][name="finished"]:checked').parentElement.getAttribute("data-value").toLowerCase())
+                    }
+                    name.innerText = boss.name
+                    bossContainer.append(name)
+
+                    if (boss.type === "vanilla") {
+                        bossContainer.insertAdjacentHTML("beforeend", `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>`)
+                    } else {
+                        bossContainer.insertAdjacentHTML("beforeend", `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`)
+                    }
+                    
+                    
+                    bossWrapper.append(bossContainer)
+                });
+            }
+
+
+            let updateRadioButtons = () => {
+
+                document.querySelectorAll(`input[type="radio"]`).forEach(radio => {
+                    radio.parentElement.toggleAttribute("checked", radio.checked)
+                    radio.parentElement.onclick = () => updateRadioButtons()
+                })
+
+                let type = document.querySelector('input[type="radio"][name="type"]:checked').parentElement.getAttribute("data-value").toLowerCase()
+                let phase = document.querySelector('input[type="radio"][name="phase"]:checked').parentElement.getAttribute("data-value").toLowerCase()
+                let finished = document.querySelector('input[type="radio"][name="finished"]:checked').parentElement.getAttribute("data-value").toLowerCase()
+                
+                getBosses(type, phase, finished)
+
+            }
+            updateRadioButtons()
+            // getBosses("all", "all")
+
+        </script>
+    </body>
+</html>
+
+<script defer>
+    
+    
+</script>
