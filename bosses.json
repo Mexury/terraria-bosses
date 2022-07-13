@@ -1,0 +1,428 @@
+[
+    {
+      "name": "King Slime",
+      "phase": "pre-hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Eye of Cthulhu",
+      "phase": "pre-hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Eater of Worlds",
+      "phase": "pre-hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Brain of Cthulhu",
+      "phase": "pre-hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Queen Bee",
+      "phase": "pre-hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Skeletron",
+      "phase": "pre-hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Deerclops",
+      "phase": "pre-hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Wall of Flesh",
+      "phase": "pre-hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Queen Slime",
+      "phase": "hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "The Twins",
+      "phase": "hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "The Destroyer",
+      "phase": "hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Skeletron Prime",
+      "phase": "hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Plantera",
+      "phase": "hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Golem",
+      "phase": "hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Duke Fishron",
+      "phase": "hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Empress of Light",
+      "phase": "hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Lunatic Cultist",
+      "phase": "hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Moon Lord",
+      "phase": "hardmode",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Dark Mage",
+      "phase": "event",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Ogre",
+      "phase": "event",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Betsy",
+      "phase": "event",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Flying Dutchman",
+      "phase": "event",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Mourning Wood",
+      "phase": "event",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Pumpking",
+      "phase": "event",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Everscream",
+      "phase": "event",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Santa-NK1",
+      "phase": "event",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Ice Queen",
+      "phase": "event",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Martian Saucer",
+      "phase": "event",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Solar Pillar",
+      "phase": "event",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Nebula Pillar",
+      "phase": "event",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Vortex Pillar",
+      "phase": "event",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Stardust Pillar",
+      "phase": "event",
+      "type": "vanilla",
+      "finished": false
+    },
+    {
+      "name": "Giant Clam",
+      "phase": "miniboss",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Earth Elemental",
+      "phase": "miniboss",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Cloud Elemental",
+      "phase": "miniboss",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Cragmaw Mire",
+      "phase": "miniboss",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Armored Digger",
+      "phase": "miniboss",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Great Sand Shark",
+      "phase": "miniboss",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Plaguebringer",
+      "phase": "miniboss",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Mauler",
+      "phase": "miniboss",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Colossal Squid",
+      "phase": "miniboss",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Reaper Shark",
+      "phase": "miniboss",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Eidolon Wyrm",
+      "phase": "miniboss",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Nuclear Terror",
+      "phase": "miniboss",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Desert Scourge",
+      "phase": "pre-hardmode",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Crabulon",
+      "phase": "pre-hardmode",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "The Hive Mind",
+      "phase": "pre-hardmode",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "The Perforators",
+      "phase": "pre-hardmode",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "The Slime God",
+      "phase": "pre-hardmode",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Cryogen",
+      "phase": "hardmode",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Aquatic Scourge",
+      "phase": "hardmode",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Brimstone Elemental",
+      "phase": "hardmode",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Calamitas",
+      "phase": "hardmode",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Leviathan and Anahita",
+      "phase": "hardmode",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Astrum Aureus",
+      "phase": "hardmode",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "The Plaguebringer Goliath",
+      "phase": "hardmode",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Ravager",
+      "phase": "hardmode",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Astrum Deus",
+      "phase": "hardmode",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Profaned Guardians",
+      "phase": "post-moonlord",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "The Dragonfolly",
+      "phase": "post-moonlord",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Providence, the Profaned Goddess",
+      "phase": "post-moonlord",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Storm Weaver",
+      "phase": "post-moonlord",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Ceaseless Void",
+      "phase": "post-moonlord",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Signus, Envoy of the Devourer",
+      "phase": "post-moonlord",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Polterghast",
+      "phase": "post-moonlord",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "The Old Duke",
+      "phase": "post-moonlord",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "The Devourer of Gods",
+      "phase": "post-moonlord",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Jungle Dragon, Yharon",
+      "phase": "post-moonlord",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Exo Mechs",
+      "phase": "post-moonlord",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Supreme Calamitas",
+      "phase": "post-moonlord",
+      "type": "calamity",
+      "finished": false
+    },
+    {
+      "name": "Adult Eidolon Wyrm",
+      "phase": "superboss",
+      "type": "calamity",
+      "finished": false
+    }
+  ]
