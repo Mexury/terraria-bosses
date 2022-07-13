@@ -1,3 +1,11 @@
+import path from 'path';
+import {fileURLToPath} from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+
+// 👇️ "/home/john/Desktop/javascript"
+const __dirname = path.dirname(__filename);
+
 import express from "express"
 import bodyParser from "body-parser"
 
@@ -110,7 +118,7 @@ bosses.all.push(...bosses.vanilla)
 bosses.all.push(...bosses.calamity)
 
 app.get("/", async (req, res) => {
-    res.sendFile('client/index.html', {root: __dirname })
+    res.sendFile('client/index.html', { root: __dirname })
 })
 
 // app.get("/reset", async (req, res) => {
