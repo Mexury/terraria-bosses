@@ -18,15 +18,24 @@ import dbConnect from "./utils/dbConnect.js"
 import Boss from "./schemas/Boss.js"
 
 import WebSocket, { WebSocketServer } from "ws"
-new WebSocketServer({ host: "terraria-bosses.herokuapp.com", port: 1000 })
-new WebSocketServer({ host: "terraria-bosses.herokuapp.com", port: 2000 })
-const wss = new WebSocketServer({ host: "terraria-bosses.herokuapp.com", port: 3000 })
-new WebSocketServer({ host: "terraria-bosses.herokuapp.com", port: 4000 })
-new WebSocketServer({ host: "terraria-bosses.herokuapp.com", port: 5000 })
-new WebSocketServer({ host: "terraria-bosses.herokuapp.com", port: 6000 })
-new WebSocketServer({ host: "terraria-bosses.herokuapp.com", port: 443 })
+// const wss = new WebSocketServer({ host: "terraria-bosses.herokuapp.com", port: 3000 })
+let wss = {}
+wss = new WebSocketServer({ server: app })
 
-console.log(wss);
+
+const zocket = (i, max) => {
+    let socket = new WebSocketServer({ host: "54.78.134.111", port: i })
+    socket.on("error", async (err) => {
+        console.log(`! ${err.address}:${err.port}`);
+        i++
+        if (i-1 < max) zocket(i, max)
+    })
+    socket.on("connection", (err) => {
+        console.log(`-------------------- ${err.address}:${err.port}`);
+    })
+}
+
+// zocket(0, 65535)
 
 wss.on('connection', ws => {
     ws.broadcast = (data) => {
