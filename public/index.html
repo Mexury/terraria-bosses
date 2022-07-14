@@ -92,18 +92,17 @@
                 },
                 {
                     normal: "http://localhost:3001",
-                    ws: "ws://localhost:4000",
+                    ws: "ws://localhost:3000",
+                },
+                {
+                    normal: "https://terraria-bosses.herokuapp.com",
+                    ws: "wss://localhost:3000",
                 }
             ]
-            let DOMAIN = DOMAINS[0]
+            let DOMAIN = DOMAINS[2]
             
             var socket = new WebSocket(`${DOMAIN.ws}`);
             socket.onopen = function () {
-                // setInterval(function() {
-                //     if (socket.bufferedAmount == 0)
-                    
-                // }, 50);
-
                 socket.onmessage = (e) => {
                     let message = JSON.parse(e.data)
                     if (message.type) {
@@ -126,7 +125,6 @@
             const updateBoss = async (boss) => {
                 
                 let target = document.querySelector(`.boss[data-boss="${boss.name}"]`)
-                console.log(boss, target);
                 target.classList.toggle("finished", boss.finished)
 
                 let viewingFinished = document.querySelector('input[type="radio"][name="finished"]:checked').parentElement.getAttribute("data-value").toLowerCase()
