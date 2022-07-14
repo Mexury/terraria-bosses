@@ -18,7 +18,7 @@ import dbConnect from "./utils/dbConnect.js"
 import Boss from "./schemas/Boss.js"
 
 import WebSocket, { WebSocketServer } from "ws"
-const wss = new WebSocketServer({ port: 3000 })
+const wss = new WebSocketServer({ server: app })
 
 wss.on('connection', ws => {
     ws.broadcast = (data) => {
