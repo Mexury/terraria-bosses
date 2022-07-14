@@ -18,7 +18,7 @@ import dbConnect from "./utils/dbConnect.js"
 import Boss from "./schemas/Boss.js"
 
 import WebSocket, { WebSocketServer } from "ws"
-const wss = new WebSocketServer({ host: "localhost", port: 3000 })
+const wss = new WebSocketServer({ host: "terraria-bosses.herokuapp.com", port: 3000 })
 
 console.log(wss);
 
