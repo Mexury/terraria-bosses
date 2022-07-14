@@ -170,3 +170,8 @@ fieldset legend {
 /* .filter-button :has(input:focus) {
     background-color: red;
 } */
+
+[hidden] {
+    display: none;
+    pointer-events: none;
+}

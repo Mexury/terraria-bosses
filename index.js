@@ -17,6 +17,33 @@ import cors from "cors"
 import dbConnect from "./utils/dbConnect.js"
 import Boss from "./schemas/Boss.js"
 
+import WebSocket, { WebSocketServer } from "ws"
+const wss = new WebSocketServer({ port: 4000 })
+
+wss.on('connection', ws => {
+    ws.broadcast = (data) => {
+        wss.clients.forEach(client => {
+            if (client.readyState === WebSocket.OPEN) client.send(data);
+        });
+    }
+    ws.on('message', async message => {
+        message = JSON.parse(message)
+        if (message.method === "update") {
+            let name = message.target
+            let bool = message.finished
+
+            const found = await Boss.findOneAndUpdate({ name: name }, { finished: bool }, { new: true })
+
+            if (found) {
+                ws.broadcast(JSON.stringify({ success: true, type: "boss_update", data: found }))
+                return
+            }
+            ws.send(JSON.stringify({ success: false, error: "Entry not found..." }))
+        }
+    })
+    ws.send(JSON.stringify({ success: true, message: "WebSocket connection established! "}))
+})
+
 app.use(cors({
     origin: '*'
 }))
