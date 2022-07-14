@@ -1,6 +1,8 @@
 import path from 'path';
 import {fileURLToPath} from 'url';
 
+import https from "https"
+
 const __filename = fileURLToPath(import.meta.url);
 
 // 👇️ "/home/john/Desktop/javascript"
@@ -19,21 +21,19 @@ import Boss from "./schemas/Boss.js"
 
 import WebSocket, { WebSocketServer } from "ws"
 // const wss = new WebSocketServer({ host: "terraria-bosses.herokuapp.com", port: 3000 })
-let wss = {}
-wss = new WebSocketServer({ server: app })
+let wss = new WebSocketServer({ server: https.createServer(app) })
 
-
-const zocket = (i, max) => {
-    let socket = new WebSocketServer({ host: "54.78.134.111", port: i })
-    socket.on("error", async (err) => {
-        console.log(`! ${err.address}:${err.port}`);
-        i++
-        if (i-1 < max) zocket(i, max)
-    })
-    socket.on("connection", (err) => {
-        console.log(`-------------------- ${err.address}:${err.port}`);
-    })
-}
+// const zocket = (i, max) => {
+//     let socket = new WebSocketServer({ host: "54.78.134.111", port: i })
+//     socket.on("error", async (err) => {
+//         console.log(`! ${err.address}:${err.port}`);
+//         i++
+//         if (i-1 < max) zocket(i, max)
+//     })
+//     socket.on("connection", (err) => {
+//         console.log(`-------------------- ${err.address}:${err.port}`);
+//     })
+// }
 
 // zocket(0, 65535)
 

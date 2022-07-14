@@ -96,10 +96,12 @@
                 },
                 {
                     normal: "https://terraria-bosses.herokuapp.com",
-                    ws: "ws://localhost:3000",
+                    ws: location.origin.replace(/^http?/, /^ws?/),
                 }
             ]
-            let DOMAIN = DOMAINS[0]
+            let DOMAIN = DOMAINS[2]
+
+            console.log(DOMAIN);
             
             var socket = new WebSocket(`${DOMAIN.ws}`);
             socket.onopen = function () {
