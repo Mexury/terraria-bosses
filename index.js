@@ -1,8 +1,6 @@
 import path from 'path';
 import {fileURLToPath} from 'url';
 
-import https from "https"
-
 const __filename = fileURLToPath(import.meta.url);
 
 // 👇️ "/home/john/Desktop/javascript"
@@ -18,48 +16,6 @@ import cors from "cors"
 
 import dbConnect from "./utils/dbConnect.js"
 import Boss from "./schemas/Boss.js"
-
-import WebSocket, { WebSocketServer } from "ws"
-// const wss = new WebSocketServer({ host: "terraria-bosses.herokuapp.com", port: 3000 })
-let wss = new WebSocketServer({ server: https.createServer(app) })
-
-// const zocket = (i, max) => {
-//     let socket = new WebSocketServer({ host: "54.78.134.111", port: i })
-//     socket.on("error", async (err) => {
-//         console.log(`! ${err.address}:${err.port}`);
-//         i++
-//         if (i-1 < max) zocket(i, max)
-//     })
-//     socket.on("connection", (err) => {
-//         console.log(`-------------------- ${err.address}:${err.port}`);
-//     })
-// }
-
-// zocket(0, 65535)
-
-wss.on('connection', ws => {
-    ws.broadcast = (data) => {
-        wss.clients.forEach(client => {
-            if (client.readyState === WebSocket.OPEN) client.send(data);
-        });
-    }
-    ws.on('message', async message => {
-        message = JSON.parse(message)
-        if (message.method === "update") {
-            let name = message.target
-            let bool = message.finished
-
-            const found = await Boss.findOneAndUpdate({ name: name }, { finished: bool }, { new: true })
-
-            if (found) {
-                ws.broadcast(JSON.stringify({ success: true, type: "boss_update", data: found }))
-                return
-            }
-            ws.send(JSON.stringify({ success: false, error: "Entry not found..." }))
-        }
-    })
-    ws.send(JSON.stringify({ success: true, message: "WebSocket connection established! "}))
-})
 
 app.use(cors({
     origin: '*'
