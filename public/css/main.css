@@ -45,7 +45,7 @@ html, body {
         transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275),
         box-shadow 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.boss:is(:hover, :active, :focus-visible, .finished, [checked]) {
+.boss:is(:hover, :active, :focus-visible, .finished, [checked], [hovering]) {
     transform: translate(0, .25em);
     box-shadow: 0 0 0 0 black;
 }

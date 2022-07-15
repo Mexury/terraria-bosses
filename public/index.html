@@ -121,6 +121,8 @@
                         const json = await response.json()
                         getBosses(type, phase, document.querySelector('input[type="radio"][name="finished"]:checked').parentElement.getAttribute("data-value").toLowerCase())
                     }
+                    bossContainer.onpointerenter = () => bossContainer.toggleAttribute("hovering", true)
+                    bossContainer.onpointerleave = () => bossContainer.toggleAttribute("hovering", false)
                     name.innerText = boss.name
                     bossContainer.append(name)
 
