@@ -85,7 +85,7 @@
 
         <script type="module" defer>
 
-            const getBosses = async (type, phase, finished) => {
+            const getBosses = async (type, phase, finished, lastModified) => {
                 const response = await fetch(`https://terraria-bosses.herokuapp.com/bosses/${type}/${phase}/${finished}`)
                 const json = await response.json()
 
@@ -119,10 +119,12 @@
                             method: "POST"
                         })
                         const json = await response.json()
-                        getBosses(type, phase, document.querySelector('input[type="radio"][name="finished"]:checked').parentElement.getAttribute("data-value").toLowerCase())
+                        getBosses(type, phase, document.querySelector('input[type="radio"][name="finished"]:checked').parentElement.getAttribute("data-value").toLowerCase(), boss.name)
                     }
-                    bossContainer.onpointerenter = () => bossContainer.toggleAttribute("hovering", true)
-                    bossContainer.onpointerleave = () => bossContainer.toggleAttribute("hovering", false)
+                    if (lastModified && lastModified === boss.name) {
+                        bossContainer.toggleAttribute("hovering", true)
+                        setTimeout(() => bossContainer.toggleAttribute("hovering", false), 100)
+                    }
                     name.innerText = boss.name
                     bossContainer.append(name)
 
