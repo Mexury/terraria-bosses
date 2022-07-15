@@ -112,9 +112,8 @@
                     let name = document.createElement("p")
                     bossContainer.toggleAttribute("checked", boss.finished)
                     bossContainer.onclick = async () => {
-                        bossContainer.toggleAttribute("checked")
-                        let finished = bossContainer.hasAttribute("checked")
-                        
+                        bossContainer.classList.toggle("finished")
+                        let finished = bossContainer.classList.contains("finished")
 
                         const response = await fetch(`https://terraria-bosses.herokuapp.com/update/${boss.name}/${finished}`, {
                             method: "POST"
